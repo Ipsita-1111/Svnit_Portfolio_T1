@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ipsita Bajpai – B.Tech CSE Student, Front-End Developer & UI/UX Enthusiast. Explore my projects, skills, and experiences." />
+  <meta name="keywords" content="Ipsita Bajpai, Portfolio, Front-End Developer, UI/UX, CSE, South Asian University" />
+  <title>Ipsita Bajpai | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">IB</div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+      <p class="loader-text">Loading Experience...</p>
+    </div>
+  </div>
+
+  <!-- Particles Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">IB<span class="dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#leadership" class="nav-link">Leadership</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">✨ Open to Opportunities</div>
+      <h1 class="hero-name reveal">Ipsita <span class="gradient-text">Bajpai</span></h1>
+      <div class="hero-subtitle reveal">
+        <span class="typing-prefix">I'm a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typing-cursor">|</span>
+      </div>
+      <p class="hero-description reveal">
+        Passionate about building aesthetic, user-focused digital experiences through technology, creativity, and
+        innovation.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+        <a href="#" class="btn btn-outline" id="resumeBtn">
+          <i class="fas fa-download"></i> Resume
+        </a>
+      </div>
+      <div class="hero-socials reveal">
+        <a href="https://github.com/Ipsita-1111" target="_blank" class="social-icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/ipsita-bajpai-157276352" target="_blank" class="social-icon"
+          aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:ipsitabajpai90471@gmail.com" class="social-icon" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to Know Me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col reveal-left">
+          <div class="profile-card">
+            <div class="profile-img-wrapper">
+              <img src="ipsita.jpeg" alt="Ipsita Bajpai" class="profile-img">
+              <div class="profile-glow"></div>
+            </div>
+            <div class="profile-status">
+              <span class="status-dot"></span> Available for Internships
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col reveal-right">
+          <h3 class="about-greeting">Hello, World! 👋</h3>
+          <p class="about-bio">
+            I'm <strong>Ipsita Bajpai</strong>, a passionate Computer Science Engineering student at <strong>South Asian
+              University, New Delhi</strong>. I thrive at the intersection of technology and creativity — turning ideas
+            into immersive digital experiences.
+          </p>
+          <p class="about-bio">
+            My interests span <strong>web development</strong>, <strong>UI/UX design</strong>, <strong>emerging
+              technologies</strong>, and creative problem solving. I love participating in <strong>hackathons</strong>,
+            building meaningful projects, and designing digital experiences that leave an impression.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <i class="fas fa-code"></i>
+              <span>Front-End Dev</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-palette"></i>
+              <span>UI/UX Design</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-lightbulb"></i>
+              <span>Hackathons</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-rocket"></i>
+              <span>Innovation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Timeline -->
+      <div class="education-section">
+        <h3 class="subsection-title">Education <span class="gradient-text">Journey</span></h3>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2024 – Present</span>
+              <h4>B.Tech – Computer Science Engineering</h4>
+              <p class="timeline-inst">South Asian University, New Delhi</p>
+              <p class="timeline-detail">Currently pursuing CSE with focus on software development, UI/UX, and emerging
+                technologies.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Class XII</span>
+              <h4>Senior Secondary Education</h4>
+              <p class="timeline-inst">JVM Shyamali, Ranchi</p>
+              <p class="timeline-detail">Science stream with Computer Science.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Class X</span>
+              <h4>Secondary Education</h4>
+              <p class="timeline-inst">JVM Shyamali, Ranchi</p>
+              <p class="timeline-detail">Foundation in Mathematics, Science, and Technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-skill="Python" data-level="80">
+              <div class="skill-info"><span>Python</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="Java" data-level="70">
+              <div class="skill-info"><span>Java</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:70%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="HTML" data-level="90">
+              <div class="skill-info"><span>HTML</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="CSS" data-level="85">
+              <div class="skill-info"><span>CSS</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-skill="JavaScript" data-level="78">
+              <div class="skill-info"><span>JavaScript</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-tools"></i> Tools & Tech</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag"><i class="fas fa-paint-brush"></i> Canva</span>
+            <span class="skill-tag"><i class="fas fa-layer-group"></i> Adobe Suite</span>
+            <span class="skill-tag"><i class="fas fa-cube"></i> IntelliJ IDEA</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title"><i class="fas fa-brain"></i> Concepts</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-magic"></i> UI/UX Design</span>
+            <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+            <span class="skill-tag"><i class="fas fa-code-branch"></i> Version Control</span>
+            <span class="skill-tag"><i class="fas fa-laptop-code"></i> Front-End Dev</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <div class="project-links-top">
+                <a href="https://github.com/Ipsita-1111" target="_blank" class="proj-link-btn" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+                <a href="#" class="proj-link-btn" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">ReadRiot</h3>
+            <p class="project-subtitle">Reader's Landing Page</p>
+            <p class="project-desc">A reader-themed landing page featuring a book suggestion spin wheel, bestseller
+              shelf, genre recommendations, and an aesthetic book-lover UI.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-hover-glow"></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <div class="project-links-top">
+                <a href="https://github.com/Ipsita-1111" target="_blank" class="proj-link-btn" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+                <a href="#" class="proj-link-btn" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">VisionX</h3>
+            <p class="project-subtitle">Hackathon Platform Concept</p>
+            <p class="project-desc">A centralized student ecosystem platform concept designed during a hackathon to
+              improve communication about events, opportunities, and internships with accessibility-focused thinking.
+            </p>
+            <div class="project-tags">
+              <span class="tag">UI/UX</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Design</span>
+            </div>
+          </div>
+          <div class="project-hover-glow"></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <i class="fas fa-user-astronaut"></i>
+              </div>
+              <div class="project-links-top">
+                <a href="https://github.com/Ipsita-1111" target="_blank" class="proj-link-btn" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+                <a href="#" class="proj-link-btn" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-subtitle">Interactive Personal Portfolio</p>
+            <p class="project-desc">An interactive modern portfolio showcasing front-end development, creativity, UI/UX
+              design, and personal branding with premium animations and glassmorphism aesthetics.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-hover-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & CERTIFICATIONS SECTION -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Experience & <span class="gradient-text">Certifications</span></h2>
+      </div>
+      <div class="exp-cert-grid">
+        <div class="exp-col">
+          <h3 class="subsection-title"><i class="fas fa-briefcase"></i> Experience</h3>
+          <div class="exp-timeline">
+            <div class="exp-item reveal">
+              <div class="exp-dot"></div>
+              <div class="exp-card">
+                <div class="exp-header">
+                  <h4>Web Development Intern</h4>
+                  <span class="exp-date">Jul 2025</span>
+                </div>
+                <p class="exp-company">Oasis Infobyte</p>
+                <ul class="exp-bullets">
+                  <li>Developed responsive webpages using Flexbox & Grid</li>
+                  <li>Added JavaScript interactivity & animations</li>
+                  <li>Followed mobile-first design approach</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-col">
+          <h3 class="subsection-title"><i class="fas fa-certificate"></i> Certifications</h3>
+          <div class="cert-grid">
+            <div class="cert-card reveal">
+              <div class="cert-icon"><i class="fas fa-palette"></i></div>
+              <div class="cert-info">
+                <h4>Graphic Design & UI/UX</h4>
+                <span>Simplilearn</span>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon"><i class="fas fa-robot"></i></div>
+              <div class="cert-info">
+                <h4>Machine Learning using Python</h4>
+                <span>Simplilearn</span>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon"><i class="fas fa-brain"></i></div>
+              <div class="cert-info">
+                <h4>Generative AI for Beginners</h4>
+                <span>Simplilearn</span>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="cert-info">
+                <h4>Cybersecurity</h4>
+                <span>ADBI Institute</span>
+              </div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-icon"><i class="fas fa-drafting-compass"></i></div>
+              <div class="cert-info">
+                <h4>Communication Design & Graphics</h4>
+                <span>South Asian University</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & ACTIVITIES SECTION -->
+  <section class="section leadership" id="leadership">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Beyond Academics</span>
+        <h2 class="section-title">Leadership & <span class="gradient-text">Activities</span></h2>
+      </div>
+      <div class="leadership-grid">
+        <div class="leadership-card reveal">
+          <div class="leadership-icon"><i class="fas fa-satellite-dish"></i></div>
+          <h4>CSTC PR Team</h4>
+          <p>Member of the Public Relations team at CSTC, managing communications and outreach.</p>
+        </div>
+        <div class="leadership-card reveal">
+          <div class="leadership-icon"><i class="fas fa-pen-nib"></i></div>
+          <h4>CSI Design & Media Lead</h4>
+          <p>Leading design and media operations for the Computer Society of India chapter.</p>
+        </div>
+        <div class="leadership-card reveal">
+          <div class="leadership-icon"><i class="fas fa-book"></i></div>
+          <h4>Books & Movies Club</h4>
+          <p>Co-head of The Books & Movies Club, organizing cultural discussions and events.</p>
+        </div>
+        <div class="leadership-card reveal">
+          <div class="leadership-icon"><i class="fas fa-star"></i></div>
+          <h4>Under25 Thought Leaders</h4>
+          <p>Active member of the Under25 Thought Leaders team, driving innovation and ideas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">Have a project in mind, an opportunity to discuss, or just want to say hi? I'd love
+            to hear from you!</p>
+          <div class="contact-details">
+            <a href="mailto:ipsitabajpai90471@gmail.com" class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-detail-label">Email</span>
+                <span class="contact-detail-value">ipsitabajpai90471@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/Ipsita-1111" target="_blank" class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-detail-label">GitHub</span>
+                <span class="contact-detail-value">github.com/Ipsita-1111</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/ipsita-bajpai-157276352" target="_blank" class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="contact-detail-label">LinkedIn</span>
+                <span class="contact-detail-value">ipsita-bajpai-157276352</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or just say hi..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="sendBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">IB<span class="dot">.</span></div>
+      <p class="footer-text">Designed &amp; Developed by <span class="gradient-text">Ipsita Bajpai</span></p>
+      <div class="footer-socials">
+        <a href="https://github.com/Ipsita-1111" target="_blank" class="social-icon" aria-label="GitHub"><i
+            class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/ipsita-bajpai-157276352" target="_blank" class="social-icon"
+          aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ipsitabajpai90471@gmail.com" class="social-icon" aria-label="Email"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">© 2026 Ipsita Bajpai. All rights reserved.</p>
+    </div>
+    <div class="footer-glow"></div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
